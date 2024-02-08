@@ -1,0 +1,66 @@
+1,2 Ans :- 
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+    public static void main(String[] args) {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String formattedDateTime = now.format(formatter);
+        System.out.println("Current Date and Time: " + formattedDateTime);
+    }
+}
+
+
+
+3. Ans :- 
+
+Collections in Java are data structures used to store and manipulate groups of objects. They provide various operations like add, remove, iterate, etc. Streams, on the other hand, are a new addition to Java introduced in Java 8. Streams allow for functional-style operations on sequences of elements. They don't store data; instead, they allow you to process data from a source (like a collection) in a pipeline fashion.
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        
+        // Using Collection
+        List<Integer> squares = numbers.stream()
+                                      .map(n -> n * n)
+                                      .collect(Collectors.toList());
+        System.out.println("Squares using Collection: " + squares);
+        
+        // Using Stream
+        List<Integer> squaresStream = numbers.stream()
+                                             .map(n -> n * n)
+                                             .collect(Collectors.toList());
+        System.out.println("Squares using Stream: " + squaresStream);
+    }
+}
+
+
+4. Ans:- 
+
+Enums (short for Enumerations) are a special data type in Java used to define a collection of constants. They provide type-safety and can be used to create a set of predefined values. Each constant value defined in an enum is an instance of that enum type.
+
+Example:
+
+java
+Copy code
+public enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Day today = Day.MONDAY;
+        System.out.println("Today is " + today);
+    }
+}
+
+
+5. Ans :-
+
+Java provides various built-in functions across different libraries and classes. Some common ones include methods for string manipulation (in the String class), mathematical functions (in the Math class), date and time manipulation (in the java.time package), file I/O operations (in the java.io package), and collections manipulation (in the java.util package). These built-in functions provide a wide range of functionalities to Java developers.
